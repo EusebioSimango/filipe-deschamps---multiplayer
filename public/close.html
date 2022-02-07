@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jogo Multiplayer - Fechando</title>
+	<style type="text/css">
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+		#screen {
+			border: 10px solid #CCC;
+			image-rendering: pixelated;
+			image-rendering: crisp-edges;
+			image-rendering: -moz-crisp-edges;
+			width: 500px;
+			height: 500px;
+		}
+		.btn {
+			display: block;
+			font-size: 30px;
+			padding: 20px;
+			border-radius: 10px;
+			text-decoration: none;
+			color: #fff;
+			background: #ff0000;
+		}
+		}
+	</style>
+	<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+	
+	<script type="module">
+		import createKeyboardListener from './keyboard-listener.js'
+		import createGame from './game.js'
+		import renderscreen from './render-screen.js'
+		const game = createGame()
+		const keyboardListener = createKeyboardListener(document) 
+		//const netork = createNetwork()
+		location.href = 'index.html'
+		delete game()
+
+		
+		//keyboardListener.subscribe(netork.update)
+
+
+
+
+		const socket = io()
+
+		
+
+	</script>
+</body>
+</html>
